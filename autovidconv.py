@@ -13,7 +13,7 @@ while True:
     for root, dirs, files in os.walk(args.dir):
         for filename in files:
             
-            if not filename.endswith("mov"):
+            if not filename.lower().endswith("mov") and not filename.lower().endswith("mp4"):
                 continue
 
             fullpath = os.path.join(root, filename)
